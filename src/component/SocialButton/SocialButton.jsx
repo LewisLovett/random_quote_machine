@@ -1,8 +1,19 @@
 import "./SocialButton.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
+  
 
 
-export default function SocialButton(){
+export default function SocialButton({socialIconName, altText, socialUrl,backgroundColor}){
+    let socialIcon;
+    if(socialIconName==='twitter'){
+        socialIcon = faTwitter;
+    }else if(socialIconName==='tumblr'){
+        socialIcon = faTumblr;
+    }
     return(
-        <button><i class="fa fa-twitter"></i></button>
+        <a href={socialUrl}><button className="socialButton" style={{backgroundColor: backgroundColor}} alt={altText}><FontAwesomeIcon icon={socialIcon} /></button></a>
+        
+        
     )
 }
