@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export default function SocialButton({socialIconName, altText, socialUrl,backgroundColor}){
-    let socialIcon;
+    let socialIcon = '';
     if(socialIconName==='twitter'){
         socialIcon = faTwitter;
     }else if(socialIconName==='tumblr'){
         socialIcon = faTumblr;
     }
     return(
-        <a href={socialUrl}><button className="socialButton" style={{backgroundColor: backgroundColor}} alt={altText}><FontAwesomeIcon icon={socialIcon} /></button></a>
+        <a href={socialUrl} className="socialButton" style={{backgroundColor: backgroundColor}} title={altText}><FontAwesomeIcon icon={socialIcon} /></a>
         
         
     )
