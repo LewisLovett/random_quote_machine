@@ -18,6 +18,19 @@ function App() {
     document.body.style.backgroundColor = {primaryColor}
   },[primaryColor])
 
+  useEffect(() => {
+    const requestOptions ={
+      method:'GET',
+      headers: {'X-Api-Key':process.env.QUOTE_API_KEY}
+    }
+    fetch('https://api.api-ninjas.com/v1/quotes',requestOptions).then((response) => response.json()).then((data)=>{
+      console.log(data);
+    }).catch((err) =>{
+      console.log(err.message);
+    })
+  })
+
+
 
   return (
     <div className="wrapper">
