@@ -9,6 +9,7 @@ body{
   height: 100vh;
   align-items: center;
   font-family: "Raleway", sans-serif;
+  transition: background-color 1s ease;
 }
 
 .wrapper{
@@ -17,6 +18,7 @@ body{
   border-radius: 3px;
     width: 450px;
     display: table;
+  
 
     &__quoteButton{
       color: #fff;
@@ -29,6 +31,7 @@ body{
       margin-top: 30px;
       cursor: pointer;
       float: right;
+      transition: background-color 1s ease;
     }
 }
 
